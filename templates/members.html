@@ -1,0 +1,22 @@
+<h2>Members</h2>
+
+<form action="/add_member" method="post">
+    Name: <input name="name">
+    Email: <input name="email">
+    Phone: <input name="phone">
+    <button type="submit">Add Member</button>
+</form>
+
+<table border="1">
+<tr><th>ID</th><th>Name</th><th>Email</th><th>Phone</th></tr>
+{% for m in members %}
+<tr>
+<td>{{m[0]}}</td>
+<td>{{m[1]}}</td>
+<td>{{m[2]}}</td>
+<td>{{m[3]}}</td>
+</tr>
+{% endfor %}
+</table>
+
+<a href="/">Back</a>
